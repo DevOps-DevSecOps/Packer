@@ -2,9 +2,10 @@
 export AWS_ACCESS_KEY_ID="<YOUR_AWS_ACCESS_KEY_ID>"
 export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
 
-[HCL2 - - files (FILE_NAME.pkr.hcl)]
+[HCL2 - files (FILE_NAME.pkr.hcl)]
 packer init .                                                           # to download Packer plugin binaries like Amazon, first command that should be executed when working with a new or existing template
 packer fmt .                                                            # formatting in all template files in current directory
 packer validate .                                                       # validate the syntax and configuration of a template,
+packer build FILE_NAME.pkr.hcl                                          # it build the image
 
 [JSON - files (FILE_NAME.json)]
