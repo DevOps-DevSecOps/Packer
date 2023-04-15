@@ -12,3 +12,4 @@ packer validate .                                                       # valida
 packer build FILE_NAME.pkr.hcl                                          # it build the image
 
 [JSON - files (FILE_NAME.json)]
+packer build FILE_NAME.json
