@@ -1,0 +1,3 @@
+It is an OpenSource Image Provisioning tool developed by Hashicorp.
+It can create Images for multiple platforms like Docker, AWS, Oracle Virtual Box, Digital Ocean, OpenStack, Linode, Azure, etc.
+It can write the instructions to the packer as JSON/HCL2 files they are called as Templates in Packer.
