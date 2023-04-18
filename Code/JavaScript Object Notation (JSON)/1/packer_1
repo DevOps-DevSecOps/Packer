@@ -1,0 +1,3 @@
+[Commands]
+$ packer validate packer_1.json
+$ packer build packer_1.json
