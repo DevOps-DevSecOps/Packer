@@ -1,0 +1,5 @@
+[Commands]
+$ packer init .
+$ packer fmt .
+$ packer validate .
+$ packer build packer_1.pkr.hcl
