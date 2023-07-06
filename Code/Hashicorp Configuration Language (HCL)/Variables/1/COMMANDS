@@ -1,0 +1,5 @@
+[build the image with the --var-file flag]
+$ packer build --var-file=Variables.pkrvars.hcl Packer_1.pkr.hcl
+
+[build the image with the --var flag]
+$ packer build --var ami_prefix=learn-packer-aws-redis-var-flag .
