@@ -11,7 +11,7 @@ source "amazon-ebs" "ubuntu" {
   ami_name      = "amazon_AMI"
   instance_type = "t2.micro"
   region        = "us-west-2"
-  source_ami    = "${lookup(var.amis)}"
+  source_ami    = "${lookup(var.amis, var.region)}"
   ssh_username = "ubuntu"
 }
 
