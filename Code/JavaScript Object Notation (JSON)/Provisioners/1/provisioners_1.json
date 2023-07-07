@@ -1,5 +1,4 @@
 {
-
   "builders": [
     {
       "type": "amazon-ebs",
@@ -9,8 +8,7 @@
       "ssh_username": "ubuntu",
       "ami_name": "packer {{timestamp}}",
       "tags": {
-         "Name": "PACKER-DEMO",
-         "Env" : "DEMO"
+        "Name": "PACKER-DEMO"
       }
     }
   ],
@@ -21,5 +19,4 @@
       "script": "file.sh"
     }
   ]
-
 }
