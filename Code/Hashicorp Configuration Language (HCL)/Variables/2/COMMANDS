@@ -1,0 +1,31 @@
+[export an Environment Variables]
+$ export PKR_VAR_ami_prefix=amazon
+
+[check Environment Variables with command]
+$ env
+....
+....
+....
+PKR_VAR_ami_prefix=amazon
+....
+....
+$ env | grep PKR_*
+PKR_VAR_ami_prefix=amazon
+$ env | grep PKR_
+PKR_VAR_ami_prefix=amazon
+
+[Packer Commands]
+$ packer init .
+$ packer validate .
+The configuration is valid.
+$ packer build .
+learn-packer.amazon-ebs.ubuntu: output will be in this color.
+==> learn-packer.amazon-ebs.ubuntu: Prevalidating any provided VPC information
+==> learn-packer.amazon-ebs.ubuntu: Prevalidating AMI Name: amazon
+    learn-packer.amazon-ebs.ubuntu: Found Image ID: ami-0e21f10bcf3ea0940
+....
+....
+....
+==> Builds finished. The artifacts of successful builds are:
+--> learn-packer.amazon-ebs.ubuntu: AMIs were created:
+us-west-2: ami-0664899fc4b727816
