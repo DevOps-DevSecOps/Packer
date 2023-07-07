@@ -25,3 +25,8 @@ packer build --var-file=FILE_NAME.pkrvars.hcl FILE_NAME.pkr.hcl         # passin
 [JSON - files (FILE_NAME.json)]
 packer validate FILE_NAME.json
 packer build FILE_NAME.json
+
+[Input Variables using Environment Variables from CLI]
+export PKR_VAR_NAME=VALUE
+export PKR_VAR_NAME='VALUE'
+export PKR_VAR_NAME="VALUE"
