@@ -13,6 +13,9 @@ source "amazon-ebs" "ubuntu" {
   region        = "us-west-2"
   source_ami    = "${lookup(var.amis, var.region)}"
   ssh_username = "ubuntu"
+  tags = {
+    name = "Packer_AMI"
+  }
 }
 
 build {
@@ -22,10 +25,7 @@ build {
   ]
 }
 
+variable "region" {}
 variable "amis" {
-  type = map(string)
-  default = {
-    "us-east-1" = "ami-b374d5a5"
-    "us-west-2" = "ami-0e21f10bcf3ea0940"
-  }
+  type = map
 }
