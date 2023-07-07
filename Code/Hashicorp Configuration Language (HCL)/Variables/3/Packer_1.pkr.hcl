@@ -8,10 +8,10 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "${var.ami}"
-  instance_type = "${var.instance_type}"
+  ami_name      = "amazon_AMI"
+  instance_type = "t2.micro"
   region        = "us-west-2"
-  source_ami    = "ami-0e21f10bcf3ea0940"
+  source_ami    = "${var.amis}"
   ssh_username = "ubuntu"
 }
 
@@ -22,10 +22,10 @@ build {
   ]
 }
 
-variable "ami" {
-  type = list
-}
-
-variable "instance_type" {
-  default = ["t2.micro", "t2.small"]
+variable "amis" {
+  type = map(string)
+  default = {
+    "us-east-1" = "ami-b374d5a5"
+    "us-west-2" = "ami-0e21f10bcf3ea0940"
+  }
 }
