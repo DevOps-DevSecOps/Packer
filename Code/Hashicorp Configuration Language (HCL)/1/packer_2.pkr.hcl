@@ -22,7 +22,8 @@ source "amazon-ebs" "ubuntu" {
   }
   ssh_username = "ubuntu"
   tag {
-    "Name": "PACKER-DEMO"
+    key = "Name" 
+    value = "PACKER-DEMO"
   }
 }
 
