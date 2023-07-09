@@ -1,0 +1,5 @@
+[Comments]
+Packer language supports three different syntaxes for comments.
+#         - begins a single-line comment
+//        - begins a single-line comment
+/* and */ - are start and end for multiple lines
