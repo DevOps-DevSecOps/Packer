@@ -11,6 +11,7 @@ export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
 packer init .                                                           # to download Packer plugin binaries like Amazon, first command that should be executed when working with a new or existing template
 packer fmt .                                                            # format and validate in all template files in current directory
 packer validate .                                                       # validate the syntax and configuration of a template,
+packer validate FILE_NAME.pkr.hcl
 packer build .
 packer build FILE_NAME.pkr.hcl                                          # it build the image
 packer build -var NAME=VALUE .
