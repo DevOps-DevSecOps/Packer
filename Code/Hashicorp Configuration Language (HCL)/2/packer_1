@@ -1,0 +1,9 @@
+$ packer build -only my_build.amazon-ebs.first-example .
+
+$ packer build -only '*.second-example-local-name' .
+
+$ packer build -only "amazon-ebs.third-example" .
+
+
+[Link]
+https://developer.hashicorp.com/packer/docs/templates/hcl_templates/onlyexcept
