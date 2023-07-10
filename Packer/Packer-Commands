@@ -12,16 +12,25 @@ packer init .                                                           # to dow
 packer fmt .                                                            # format and validate in all template files in current directory
 packer validate .                                                       # validate the syntax and configuration of a template,
 packer validate FILE_NAME.pkr.hcl
+packer validate -var="NAME=VALUE" .
+packer validate -var="NAME=VALUE" FILE_NAME.pkr.hcl
+packer validate -var-file=FILE_NAME.pkrvars.hcl .
+packer validate -var-file=FILE_NAME.pkrvars.hcl FILE_NAME.pkr.hcl
+packer validate -var="NAME=VALUE" -var-file 'FILE_NAME.pkrvars.hcl' .
+packer validate -var='NAME=VALUE' -var-file "FILE_NAME.pkrvars.hcl" FILE_NAME.pkr.hcl
 packer build .
 packer build FILE_NAME.pkr.hcl                                          # it build the image
 packer build -var NAME=VALUE .
 packer build -var "NAME=VALUE" .
 packer build -var "NAME=VALUE" "NAME=VALUE" .
+packer build -var="NAME=VALUE" .
 packer build --var NAME=VALUE .                                         
-packer build -var-file=FILE_NAME.pkrvars.hcl
+packer build -var-file=FILE_NAME.pkrvars.hcl .
 packer build -var-file="FILE_NAME.pkrvars.hcl" .
 packer build -var-file="FILE_NAME.pkrvars.hcl" -var-file="FILE_NAME.pkrvars.hcl" .
 packer build --var-file=FILE_NAME.pkrvars.hcl FILE_NAME.pkr.hcl         # passing values to variables
+packer build -var="NAME=VALUE" -var-file 'FILE_NAME.pkrvars.hcl' .
+packer build -var='NAME=VALUE' -var-file "FILE_NAME.pkrvars.hcl" FILE_NAME.pkr.hcl
 
 [JSON - files (FILE_NAME.json)]
 packer validate FILE_NAME.json
