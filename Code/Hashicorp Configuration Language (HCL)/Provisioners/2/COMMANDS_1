@@ -1,0 +1,7 @@
+$ export PKR_VAR_region=us-west-2
+
+$ packer init .
+
+$ packer validate -var="type=t2.micro" .
+
+$ packer build -var="type=t2.micro" .
