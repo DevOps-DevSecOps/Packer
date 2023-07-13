@@ -1,0 +1,2 @@
+$ packer validate -var="image_id=ami-0524ebad78845526c" .
+$ packer build -var="image_id=ami-0524ebad78845526c" .
