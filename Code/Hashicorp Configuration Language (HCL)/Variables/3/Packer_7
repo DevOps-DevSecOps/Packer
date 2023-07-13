@@ -1,0 +1,3 @@
+$ packer validate -var-file="Values_7.pkrvars.hcl" .
+
+$ packer build -var-file="Values_7.pkrvars.hcl" .
